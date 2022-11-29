@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sara's page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@200&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/39417c7ec1.js" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+        <header>
+            <div class="logo"><strong>SARA'S PAGE</strong></div>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="home.html">About me</a></li>
+                    <li><a href="favorites.html">My favorites</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="impressions.html">Your impressions</a></li>
+                    <li><a href="#contact_div">Contact me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="header">GALLERY</h1>
+        <div class="wrapper">
+            <div class="main">
+                <div class="box">
+                    <img src="fam_more_bw.jpg" id="image" name="fam_more"  onmouseover="this.src='fam_more.jpg'" onmouseout="this.src='fam_more_bw.jpg'">
+                    <div class="like" id="like1">
+                        <button id="like_btn1"><i class="fa-solid fa-heart" ></i></button>
+                        <input id="input1" type="number" value="0" name="">
+                    </div>
+                    <div class="desc">
+                        Me and my family in Greece this summer
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="ivan_bw.jpg" id="image" name="ivan" class="slika"  onmouseover="this.src='ivan.jpg'" onmouseout="this.src='ivan_bw.jpg'">
+                    <div class="like" id="like2">
+                        <button id="like_btn2"><i class="fa-solid fa-heart" ></i></button>
+                        <input id="input2" type="number" value="0" name="">
+                    </div>
+                    <div class="desc" style="width: 300px;">
+                        Me and my boyfriend Ivan on vacation last summer
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jas_bw.jpg" id="image" name="jas"  class="slika"  onmouseover="this.src='jas.jpg'" onmouseout="this.src='jas_bw.jpg'">
+                    <div class="like" id="like3">
+                        <button id="like_btn3"><i class="fa-solid fa-heart" ></i></button>
+                        <input id="input3" type="number" value="0" name="">
+                    </div>
+                    <div class="desc" style="width: 300px;">
+                        Me a couple of years ago
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="kolegi1_bw.jpg" id="image" name="kolegi1"  onmouseover="this.src='kolegi1.jpg'" onmouseout="this.src='kolegi1_bw.jpg'">
+                    <div class="like" id="like4">
+                        <button id="like_btn4"><i class="fa-solid fa-heart" ></i></button>
+                        <input id="input4" type="number" value="0" name="">
+                    </div>
+                    <div class="desc">
+                        Me and my uni colleagues when they came to visit Veles
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="drugarki_bw.jpg" id="image" name="drugarki"  onmouseover="this.src='drugarki.jpg'" onmouseout="this.src='drugarki_bw.jpg'">
+                    <div class="like" id="like5">
+                        <button id="like_btn5"><i class="fa-solid fa-heart" ></i></button>
+                        <input id="input5" type="number" value="0" name="">
+                    </div>
+                    <div class="desc">
+                        Me and my friends on a boat party this summer
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="fam_ng_bw.jpg" id="image" name="fam_ng"  onmouseover="this.src='fam_ng.jpg'" onmouseout="this.src='fam_ng_bw.jpg'">
+                    <div class="like" id="like6">
+                        <button id="like_btn6"><i class="fa-solid fa-heart" ></i></button>
+                        <input id="input6" type="number" value="0" name="">
+                    </div>
+                    <div class="desc">
+                        Me and my family this New Year's eve
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="contact_div" class="footer">
+            <div id="text"><strong>My contact info</strong></div>
+            <div class="socials ">
+                <a href="https://www.facebook.com/sarapoptodorova" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i> </a>
+                <a href="https://www.instagram.com/poptodorovas/" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl"></i> </a>
+                <a href="https://twitter.com/sarapoptodorova" target="_blank"><i class="fa-brands fa-square-twitter fa-2xl"></i> </a>
+                <a href="mailto:sara.poptodorova@yahoo.com" target="_blank"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+                <i class="fa-solid fa-square-phone fa-2xl"></i>
+            </div>
+        </div>
+        <script type="text/javascript" >
+            let like1=document.querySelector('#like_btn1');
+            let like2=document.querySelector('#like_btn2');
+            let like3=document.querySelector('#like_btn3');
+            let like4=document.querySelector('#like_btn4');
+            let like5=document.querySelector('#like_btn5');
+            let like6=document.querySelector('#like_btn6');
+
+            let input1=document.querySelector('#input1');
+            let input2=document.querySelector('#input2');
+            let input3=document.querySelector('#input3');
+            let input4=document.querySelector('#input4');
+            let input5=document.querySelector('#input5');
+            let input6=document.querySelector('#input6');
+
+            like1.addEventListener('click',()=>{
+                input1.value=parseInt(input1.value)+1;
+                like1.style.color="red";
+            })
+            like2.addEventListener('click',()=>{
+                input2.value=parseInt(input2.value)+1;
+                like2.style.color="red";
+            })
+            like3.addEventListener('click',()=>{
+                input3.value=parseInt(input3.value)+1;
+                like3.style.color="red";
+            })
+            like4.addEventListener('click',()=>{
+                input4.value=parseInt(input4.value)+1;
+                like4.style.color="red";
+            })
+            like5.addEventListener('click',()=>{
+                input5.value=parseInt(input5.value)+1;
+                like5.style.color="red";
+            })
+            like6.addEventListener('click',()=>{
+                input6.value=parseInt(input6.value)+1;
+                like6.style.color="red";
+            })
+        </script>
+    </body>
+</html>
